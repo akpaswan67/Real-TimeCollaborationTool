@@ -1,8 +1,8 @@
 import {Server} from 'socket.io';
 import Connection from './database/db.js';
 import { getDocument, updateDocument  } from './controllers/document-controller.js';
-
-const PORT= 9000;
+require("dotenv").config();
+const PORT= process.env.PORT||9000;
 Connection();
 const io = new Server(PORT,{
 	cors: {

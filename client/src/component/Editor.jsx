@@ -41,8 +41,8 @@ const Editor=()=>{
 	},[]);
 
 	useEffect(()=>{
-		// const socketServer = io('https://collaborative-document-editing-system-2.onrender.com/');
-		const socketServer = io('http://localhost:9000');
+		const socketServer = io('https://collaborative-document-editing-system-2.onrender.com');
+		// const socketServer = io('http://localhost:9000');
 		SetSocket(socketServer);
 		return ()=>{
 			socketServer.disconnect();
